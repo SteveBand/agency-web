@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/main.scss";
-import { Route, Router, Routes } from "react-router-dom";
-import Dashboard from "./views/dashboard";
+import { Route, Routes } from "react-router-dom";
+import { Dashboard } from "./views/dashboard";
 import Header from "./components/Header";
 
 function App() {
