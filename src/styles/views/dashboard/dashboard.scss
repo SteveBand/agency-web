@@ -1,9 +1,9 @@
-@import "../variables";
+@import "../../variables";
 
 .hero-section {
   @include container-size;
   box-sizing: border-box;
-  padding: 100px 0;
+  padding: 100px 20px;
   .hero-title {
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@
 }
 
 .trusted-businesses {
-  padding-bottom: 100px;
+  padding: 0 20px 100px 20px;
   @include container-size;
   p.sub-title {
     color: $rr-white-color;
@@ -152,17 +152,17 @@
   }
   .swiper {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 60px 0;
-
-    .swiper-slide {
-      width: 200px;
-    }
   }
   .swiper-wrapper {
     display: flex;
     align-items: center;
+
+    .swiper-slider {
+      width: 100%;
+      height: 100%;
+    }
 
     .svg-container {
       width: max-content;
@@ -198,7 +198,7 @@
 
 .service-section {
   @include container-size;
-  padding-bottom: 100px;
+  padding: 0 20px 100px 20px;
 
   h5.service-sub-title {
     font-size: 26px;
@@ -218,6 +218,10 @@
     color: $rr-gray-color;
     font-size: 18px;
     margin-bottom: 30px;
+  }
+
+  .services-container-wrapper[data-view="mobile"] {
+    display: none;
   }
 
   .services-container-wrapper {
@@ -276,6 +280,10 @@
         }
       }
     }
+  }
+  .mySwiper {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -472,5 +480,76 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero-section {
+    .hero-title {
+      h1 {
+        font-size: 72px;
+      }
+    }
+  }
+
+  .service-section .services-container-wrapper {
+    width: 100%;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .hero-section {
+    .hero-title {
+      h1 {
+        font-size: 56px;
+      }
+    }
+  }
+
+  .service-section .services-container-wrapper[data-view="desktop"] {
+    display: none;
+  }
+  .service-section .services-container-wrapper[data-view="mobile"] {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mobile-hide {
+    display: none;
+  }
+  .hero-section {
+    .hero-title {
+      h1 {
+        font-size: 42px;
+
+        .index-module_type__E-SaG {
+          display: block;
+        }
+      }
+
+      p.desc {
+        font-size: 14px;
+      }
+
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .avatars {
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    text-align: center;
+    font-size: 32px;
   }
 }

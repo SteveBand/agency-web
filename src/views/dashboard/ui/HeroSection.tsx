@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
             repeat={Infinity}
             deletionSpeed={1}
           />{" "}
-          <br />
+          <br className="mobile-hide" />
           for your business
         </h1>
 

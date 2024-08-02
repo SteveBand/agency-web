@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
+import { BsList } from "react-icons/bs";
 
 export default function Header() {
   return (
@@ -8,6 +9,7 @@ export default function Header() {
       <nav>
         <Link to={"/"}>
           <h1>
+            <BsList />
             Re<span>^</span>rtex
           </h1>
         </Link>

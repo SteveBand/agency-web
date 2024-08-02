@@ -6,7 +6,7 @@ import { checkmark } from "../../assets/svgs/dashboard";
 import { Link } from "react-router-dom";
 import { HeroSection } from "./ui/HeroSection";
 import { TrustedBusinesses } from "./ui/TrustedBusinesses";
-import { ServiceSection } from "./ui/ServiceSection";
+import { ServiceSection } from "./ui/ServiceSection/ServiceSection";
 import { PortfolioSection } from "./ui/PortfolioSection";
 import { PricingSection } from "./ui/PricingSection";
 export const Dashboard: React.FC = () => {

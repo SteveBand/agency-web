@@ -11,5 +11,7 @@ $rr-cards-bg-color: #ffffff0d;
 $rr-cards-bg-hover-color: #ffffff1b;
 @mixin container-size {
   max-width: 1520px;
+
+  box-sizing: border-box;
   margin: 0 auto;
 }
