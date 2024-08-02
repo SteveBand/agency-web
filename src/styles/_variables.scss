@@ -5,7 +5,10 @@ $rr-gray-color: #969799;
 $rr-white-color: #f5f5f5;
 $rr-button-slide: #6c58f1;
 $rr-border-color: #c3c4c518;
+$rr-purple-border-color: #a89bff52;
 
+$rr-cards-bg-color: #ffffff0d;
+$rr-cards-bg-hover-color: #ffffff1b;
 @mixin container-size {
   max-width: 1520px;
   margin: 0 auto;
