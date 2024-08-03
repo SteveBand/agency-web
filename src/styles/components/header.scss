@@ -5,9 +5,10 @@ header {
   border-bottom: 1px solid $rr-border-color;
   position: sticky;
   width: 100%;
-  top: 10px;
+  top: 20px;
   left: 0;
   z-index: 10;
+  transition: 300ms ease-in-out;
 
   nav {
     display: flex;
@@ -115,4 +116,9 @@ header {
       display: block;
     }
   }
+}
+
+header.active-header {
+  top: 0;
+  background-color: $rr-dark-color;
 }
