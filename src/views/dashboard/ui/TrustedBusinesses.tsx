@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import {
   AmazonLogo,
   AppleLogo,
@@ -31,15 +31,15 @@ export const TrustedBusinesses: React.FC = () => {
 
       <Swiper
         spaceBetween={10}
-        slidesPerView={"auto"}
+        slidesPerView={4}
         breakpoints={{
-          448: {
-            slidesPerView: 2,
+          300: {
+            slidesPerView: 1,
             spaceBetween: 30,
           },
           660: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerView: 2,
+            spaceBetween: 20,
           },
           786: {
             slidesPerView: 3,
@@ -51,7 +51,7 @@ export const TrustedBusinesses: React.FC = () => {
             spaceBetween: 30,
           },
 
-          1400: {
+          1300: {
             slidesPerView: 6,
             spaceBetween: 50,
           },
@@ -67,7 +67,7 @@ export const TrustedBusinesses: React.FC = () => {
       >
         {Logos.map((logo) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide className="custom-slider">
               <div className="svg-container">{logo}</div>
             </SwiperSlide>
           );

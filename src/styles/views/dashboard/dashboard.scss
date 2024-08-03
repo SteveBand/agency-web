@@ -150,6 +150,12 @@
     color: $rr-white-color;
     text-align: center;
   }
+
+  .mySwiper {
+    .custom-slider {
+      width: calc(100% / 3);
+    }
+  }
   .swiper {
     width: 100%;
     margin: 0 auto;
@@ -199,6 +205,10 @@
 .service-section {
   @include container-size;
   padding: 0 20px 100px 20px;
+
+  .swiper-pagination-bullet {
+    background-color: $rr-primary-color;
+  }
 
   h5.service-sub-title {
     font-size: 26px;
@@ -289,7 +299,7 @@
 
 .portfolio-section {
   @include container-size;
-  padding-bottom: 100px;
+  padding: 0 20px 100px 20px;
 
   h5.portfolio-sub-title {
     font-size: 26px;
@@ -309,14 +319,15 @@
     color: $rr-gray-color;
     font-size: 18px;
     margin-bottom: 30px;
-    max-width: 30vw;
+    max-width: 40vw;
   }
 
   article.portfolios-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 450px));
     grid-template-rows: 400px repeat(auto-fill, 400px);
     gap: 20px;
+    // justify-content: center;
 
     .portfolio-container {
       background-position: center;
@@ -360,7 +371,7 @@
 
 .pricing-section {
   @include container-size;
-  padding-bottom: 100px;
+  padding: 0 20px 100px 20px;
 
   h5.pricing-sub-title {
     font-size: 26px;
@@ -368,7 +379,6 @@
     letter-spacing: 5px;
     color: $rr-purple-color;
   }
-
   h3.pricing-title {
     font-size: 46px;
     font-weight: 300;
@@ -498,6 +508,35 @@
 
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .portfolio-section {
+    p.desc {
+      max-width: 100%;
+    }
+  }
+
+  .portfolio-section article.portfolios-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(350px, 450px));
+  }
+
+  .portfolio-section article.portfolios-wrapper .portfolio-container a {
+    height: auto;
+    padding: 25px 40px;
+  }
+
+  .mySwiper {
+    .custom-slider {
+      width: calc(100% / 3);
+    }
+  }
+
+  .pricing-section {
+    .packages-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 0));
+    }
+  }
 }
 
 @media screen and (max-width: 786px) {
@@ -505,6 +544,12 @@
     .hero-title {
       h1 {
         font-size: 56px;
+      }
+    }
+
+    .trusted-businesses {
+      .swiper-slide {
+        width: 200px;
       }
     }
   }
@@ -539,17 +584,67 @@
         flex-direction: column;
         align-items: flex-start;
 
+        button {
+          display: flex;
+          justify-content: center;
+          font-size: 18px;
+          width: 40%;
+          min-width: 185px;
+        }
+
         .avatars {
           padding: 0 0 0 20px;
         }
       }
     }
   }
+
+  .service-section {
+    margin: 0 auto;
+    h5.service-sub-title {
+      font-size: 22px;
+    }
+    h3.service-title {
+      font-size: 32px;
+    }
+
+    p.desc {
+      font-size: 16px;
+    }
+  }
+
+  .portfolio-section {
+    h5.portfolio-sub-title {
+      font-size: 22px;
+    }
+
+    h3.portfolio-title {
+      font-size: 32px;
+    }
+
+    p.desc {
+      max-width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  .pricing-section {
+    h5.pricing-sub-title {
+      font-size: 22px;
+    }
+    h3.pricing-title {
+      font-size: 32px;
+    }
+
+    p.pricing-desc {
+      font-size: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
   h1 {
-    text-align: center;
+    // text-align: center;
     font-size: 32px;
   }
 }

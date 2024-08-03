@@ -3,7 +3,7 @@ import { BsAwardFill, BsChatFill, BsFillLightningFill } from "react-icons/bs";
 import { HiArrowRight } from "react-icons/hi2";
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
@@ -16,10 +16,13 @@ export const MobileService = () => {
         spaceBetween={50}
         slidesPerView={1}
         centeredSlides={true}
+        pagination={{
+          dynamicBullets: true,
+        }}
         loop={true}
         freeMode={true}
         autoplay={{ delay: 2500 }}
-        modules={[Autoplay, FreeMode]}
+        modules={[Autoplay, FreeMode, Pagination]}
         //   onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper: any) => console.log(swiper)}
         className="mySwiper"
