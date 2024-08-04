@@ -9,6 +9,7 @@ import { TrustedBusinesses } from "./ui/TrustedBusinesses";
 import { ServiceSection } from "./ui/ServiceSection/ServiceSection";
 import { PortfolioSection } from "./ui/PortfolioSection";
 import { PricingSection } from "./ui/PricingSection";
+import { Testimonials } from "./ui/Testimonials";
 export const Dashboard: React.FC = () => {
   const textEl = useRef<HTMLSpanElement>(null);
 
@@ -23,6 +24,8 @@ export const Dashboard: React.FC = () => {
       <PortfolioSection />
 
       <PricingSection />
+
+      <Testimonials />
     </>
   );
 };

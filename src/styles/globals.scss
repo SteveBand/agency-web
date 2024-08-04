@@ -35,6 +35,7 @@ main::after {
   z-index: 5;
   animation: flicker-1 2s infinite;
   content: "";
+  z-index: -10;
 }
 
 @media screen and (max-width: 992px) {

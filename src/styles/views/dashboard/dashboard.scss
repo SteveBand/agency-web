@@ -395,7 +395,7 @@
   .packages-wrapper {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    // justify-content: center;
     .package-container {
       flex: 1;
       padding: 20px;
@@ -489,6 +489,72 @@
           }
         }
       }
+    }
+  }
+}
+
+.testi-section {
+  @include container-size;
+  padding: 0 20px 100px 20px;
+
+  h5.sub-title {
+    font-size: 26px;
+    font-weight: 200;
+    letter-spacing: 5px;
+    color: $rr-purple-color;
+  }
+  h3.title {
+    font-size: 46px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: $rr-white-color;
+  }
+
+  p.desc {
+    color: $rr-gray-color;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: $rr-primary-color;
+  }
+
+  .testi-container {
+    width: 80%;
+    max-width: 1200px;
+    min-width: 700px;
+    background-color: rgba(255, 255, 255, 0.028);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 5% 10%;
+    box-sizing: border-box;
+    border-radius: 12px;
+    gap: 50px;
+
+    .author {
+      margin: 0 auto;
+      text-align: center;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .testi {
+      color: $rr-white-color;
+    }
+    h6 {
+      color: $rr-white-color;
+      font-size: 15px;
+    }
+
+    p {
+      color: $rr-gray-color;
     }
   }
 }
@@ -638,6 +704,10 @@
 
     p.pricing-desc {
       font-size: 16px;
+    }
+    .packages-wrapper {
+      justify-content: center;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 0));
     }
   }
 }

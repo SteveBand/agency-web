@@ -61,13 +61,13 @@ export const TrustedBusinesses: React.FC = () => {
         freeMode={true}
         autoplay={{ delay: 2500 }}
         modules={[Autoplay, FreeMode]}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper: any) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper: any) => console.log(swiper)}
         className="mySwiper"
       >
-        {Logos.map((logo) => {
+        {Logos.map((logo, index) => {
           return (
-            <SwiperSlide className="custom-slider">
+            <SwiperSlide className="custom-slider" key={index}>
               <div className="svg-container">{logo}</div>
             </SwiperSlide>
           );
